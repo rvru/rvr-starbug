@@ -15,6 +15,8 @@
 # Build rules for RiscV simulator code.
 
 load("@com_google_mpact-sim//mpact/sim/decoder:mpact_sim_isa.bzl", "mpact_bin_fmt_decoder", "mpact_isa_decoder")
+load("@rules_cc//cc:cc_binary.bzl", "cc_binary")
+load("@rules_cc//cc:cc_library.bzl", "cc_library")
 
 package(
     default_applicable_licenses = ["//:license"],
@@ -38,6 +40,8 @@ exports_files([
     "riscv64v.isa",
     "riscv64zb.bin_fmt",
     "riscv64zb.isa",
+    "riscv_format16.bin_fmt",
+    "riscv_format32.bin_fmt",
     "riscv_vector.bin_fmt",
     "riscv_vector.isa",
 ])
@@ -321,7 +325,31 @@ cc_library(
         ":riscv_state",
         "@com_google_absl//absl/log",
         "@com_google_absl//absl/numeric:bits",
+        "@com_google_absl//absl/strings",
         "@com_google_absl//absl/types:span",
+        "@com_google_mpact-sim//mpact/sim/generic:instruction",
+        "@com_google_mpact-sim//mpact/sim/generic:type_helpers",
+    ],
+)
+
+cc_library(
+    name = "riscv_zfh_instructions",
+    srcs = ["riscv_zfh_instructions.cc"],
+    hdrs = [
+        "riscv_instruction_helpers.h",
+        "riscv_zfh_instructions.h",
+    ],
+    copts = [
+        "-ffp-model=strict",
+        "-O3",
+    ],
+    deps = [
+        ":riscv_fp_state",
+        ":riscv_state",
+        "@com_google_absl//absl/base",
+        "@com_google_absl//absl/log",
+        "@com_google_mpact-sim//mpact/sim/generic:arch_state",
+        "@com_google_mpact-sim//mpact/sim/generic:core",
         "@com_google_mpact-sim//mpact/sim/generic:instruction",
         "@com_google_mpact-sim//mpact/sim/generic:type_helpers",
     ],
@@ -344,6 +372,10 @@ mpact_bin_fmt_decoder(
     decoder_name = "RiscV32G",
     includes = [
         "riscv32v.bin_fmt",
+        "riscv32zb.bin_fmt",
+        "riscv_format16.bin_fmt",
+        "riscv_format32.bin_fmt",
+        "riscv_vector.bin_fmt",
     ],
     deps = [
         ":riscv32g_isa",
@@ -376,6 +408,8 @@ mpact_bin_fmt_decoder(
     includes = [
         "riscv32g.bin_fmt",
         "riscv32zb.bin_fmt",
+        "riscv_format16.bin_fmt",
+        "riscv_format32.bin_fmt",
         "riscv_vector.bin_fmt",
     ],
     prefix = "riscv32gv",
@@ -408,6 +442,8 @@ mpact_bin_fmt_decoder(
     includes = [
         "riscv32g.bin_fmt",
         "riscv32zb.bin_fmt",
+        "riscv_format16.bin_fmt",
+        "riscv_format32.bin_fmt",
     ],
     prefix = "riscv32gzb",
     deps = [
@@ -441,6 +477,8 @@ mpact_bin_fmt_decoder(
     includes = [
         "riscv32g.bin_fmt",
         "riscv32zb.bin_fmt",
+        "riscv_format16.bin_fmt",
+        "riscv_format32.bin_fmt",
         "riscv_vector.bin_fmt",
     ],
     prefix = "riscv32gvzb",
@@ -483,6 +521,8 @@ mpact_bin_fmt_decoder(
         "riscv32g.bin_fmt",
         "riscv32v.bin_fmt",
         "riscv32zb.bin_fmt",
+        "riscv_format16.bin_fmt",
+        "riscv_format32.bin_fmt",
         "riscv_zc.bin_fmt",
         "riscv_zhintpause.bin_fmt",
         "riscv_zicbop.bin_fmt",
@@ -513,6 +553,8 @@ mpact_bin_fmt_decoder(
     src = "riscv64g.bin_fmt",
     decoder_name = "RiscV64G",
     includes = [
+        "riscv_format16.bin_fmt",
+        "riscv_format32.bin_fmt",
     ],
     prefix = "riscv64g",
     deps = [
@@ -548,6 +590,8 @@ mpact_bin_fmt_decoder(
         "riscv32zb.bin_fmt",
         "riscv64g.bin_fmt",
         "riscv64zb.bin_fmt",
+        "riscv_format16.bin_fmt",
+        "riscv_format32.bin_fmt",
         "riscv_vector.bin_fmt",
     ],
     prefix = "riscv64gv",
@@ -584,6 +628,8 @@ mpact_bin_fmt_decoder(
         "riscv32zb.bin_fmt",
         "riscv64g.bin_fmt",
         "riscv64zb.bin_fmt",
+        "riscv_format16.bin_fmt",
+        "riscv_format32.bin_fmt",
         "riscv_vector.bin_fmt",
     ],
     prefix = "riscv64gvzb",
@@ -618,6 +664,8 @@ mpact_bin_fmt_decoder(
         "riscv32zb.bin_fmt",
         "riscv64g.bin_fmt",
         "riscv64zb.bin_fmt",
+        "riscv_format16.bin_fmt",
+        "riscv_format32.bin_fmt",
     ],
     prefix = "riscv64gzb",
     deps = [
@@ -646,11 +694,69 @@ mpact_bin_fmt_decoder(
     decoder_name = "ZVBB",
     includes = [
         "riscv32g.bin_fmt",
+        "riscv_format16.bin_fmt",
+        "riscv_format32.bin_fmt",
         "riscv_vector.bin_fmt",
     ],
     prefix = "zvbb",
     deps = [
         ":zvbb_isa",
+    ],
+)
+
+mpact_isa_decoder(
+    name = "zfh32_isa",
+    src = "riscv_zfh.isa",
+    includes = [],
+    isa_name = "ZFH32",
+    prefix = "zfh32",
+    deps = [
+        ":riscv_g",
+        ":riscv_zfh_instructions",
+        "@com_google_absl//absl/functional:bind_front",
+    ],
+)
+
+mpact_isa_decoder(
+    name = "zfh64_isa",
+    src = "riscv_zfh.isa",
+    includes = [],
+    isa_name = "ZFH64",
+    prefix = "zfh64",
+    deps = [
+        ":riscv_g",
+        ":riscv_zfh_instructions",
+        "@com_google_absl//absl/functional:bind_front",
+    ],
+)
+
+mpact_bin_fmt_decoder(
+    name = "zfh32_bin_fmt",
+    src = "riscv_zfh32.bin_fmt",
+    decoder_name = "ZFH",
+    includes = [
+        "riscv32g.bin_fmt",
+        "riscv_format16.bin_fmt",
+        "riscv_format32.bin_fmt",
+    ],
+    prefix = "zfh32",
+    deps = [
+        ":zfh32_isa",
+    ],
+)
+
+mpact_bin_fmt_decoder(
+    name = "zfh64_bin_fmt",
+    src = "riscv_zfh64.bin_fmt",
+    decoder_name = "ZFH",
+    includes = [
+        "riscv32g.bin_fmt",
+        "riscv_format16.bin_fmt",
+        "riscv_format32.bin_fmt",
+    ],
+    prefix = "zfh64",
+    deps = [
+        ":zfh64_isa",
     ],
 )
 
@@ -1149,6 +1255,7 @@ cc_library(
     ],
     features = ["-use_header_modules"],
     deps = [
+        "@com_google_absl//absl/status",
         "@com_google_absl//absl/status:statusor",
     ],
 )
@@ -1303,6 +1410,8 @@ cc_library(
     ],
     deps = [
         "@com_google_absl//absl/strings",
+        "@com_google_mpact-sim//mpact/sim/generic:core",
+        "@com_google_mpact-sim//mpact/sim/generic:instruction",
         "@com_google_mpact-sim//mpact/sim/util/memory",
     ],
 )
@@ -1465,24 +1574,27 @@ cc_binary(
         "riscv32_renode.h",
     ],
     # List the symbols for the functions called by renode as undefined.
-    linkopts = [
-        "-u construct",
-        "-u construct_with_sysbus",
-        "-u connect",
-        "-u connect_with_sysbus",
-        "-u destruct",
-        "-u get_reg_info_size",
-        "-u get_reg_info",
-        "-u load_elf",
-        "-u read_register",
-        "-u write_register",
-        "-u read_memory",
-        "-u write_memory",
-        "-u reset",
-        "-u step",
-        "-u set_config",
-        "-u set_irq_value",
-    ],
+    linkopts = select({
+        "darwin_arm64_cpu": ["-undefined=dynamic_lookup"],
+        "//conditions:default": [
+            "-uconnect",
+            "-uconnect_with_sysbus",
+            "-uconstruct",
+            "-uconstruct_with_sysbus",
+            "-udestruct",
+            "-uget_reg_info",
+            "-uget_reg_info_size",
+            "-uload_elf",
+            "-uread_memory",
+            "-uread_register",
+            "-ureset",
+            "-uset_config",
+            "-uset_irq_value",
+            "-ustep",
+            "-uwrite_memory",
+            "-uwrite_register",
+        ],
+    }),
     linkshared = True,
     linkstatic = True,
     deps = [
@@ -1501,24 +1613,27 @@ cc_binary(
         "riscv64_renode.h",
     ],
     # List the symbols for the functions called by renode as undefined.
-    linkopts = [
-        "-u construct",
-        "-u construct_with_sysbus",
-        "-u connect",
-        "-u connect_with_sysbus",
-        "-u destruct",
-        "-u get_reg_info_size",
-        "-u get_reg_info",
-        "-u load_elf",
-        "-u read_register",
-        "-u write_register",
-        "-u read_memory",
-        "-u write_memory",
-        "-u reset",
-        "-u step",
-        "-u set_config",
-        "-u set_irq_value",
-    ],
+    linkopts = select({
+        "darwin_arm64_cpu": ["-undefined=dynamic_lookup"],
+        "//conditions:default": [
+            "-uconnect",
+            "-uconnect_with_sysbus",
+            "-uconstruct",
+            "-uconstruct_with_sysbus",
+            "-udestruct",
+            "-uget_reg_info",
+            "-uget_reg_info_size",
+            "-uload_elf",
+            "-uread_memory",
+            "-uread_register",
+            "-ureset",
+            "-uset_config",
+            "-uset_irq_value",
+            "-ustep",
+            "-uwrite_memory",
+            "-uwrite_register",
+        ],
+    }),
     linkshared = True,
     linkstatic = True,
     deps = [
