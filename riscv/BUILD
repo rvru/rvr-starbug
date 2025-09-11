@@ -788,6 +788,33 @@ cc_library(
 )
 
 cc_library(
+    name = "riscv32_vliw_decoder",
+    srcs = [
+        "riscv32_vliw_decoder.cc",
+        "riscv32_vliw_encoding.cc",
+    ],
+    hdrs = [
+        "riscv32_vliw_decoder.h",
+        "riscv32_vliw_encoding.h",
+    ],
+    copts = ["-O3"],
+    deps = [
+        ":riscv32g_bin_fmt",
+        ":riscv32g_isa",
+        ":riscv_state",
+        "@com_google_absl//absl/container:flat_hash_map",
+        "@com_google_absl//absl/functional:any_invocable",
+        "@com_google_absl//absl/log",
+        "@com_google_absl//absl/strings",
+        "@com_google_mpact-sim//mpact/sim/generic:core",
+        "@com_google_mpact-sim//mpact/sim/generic:instruction",
+        "@com_google_mpact-sim//mpact/sim/generic:program_error",
+        "@com_google_mpact-sim//mpact/sim/generic:type_helpers",
+        "@com_google_mpact-sim//mpact/sim/util/memory",
+    ],
+)
+
+cc_library(
     name = "riscv_getters",
     hdrs = [
         "riscv_getter_helpers.h",
@@ -1271,6 +1298,42 @@ cc_binary(
         ":riscv32_htif_semihost",
         ":riscv32g_bitmanip_decoder",
         ":riscv32g_decoder",
+        ":riscv_arm_semihost",
+        ":riscv_fp_state",
+        ":riscv_state",
+        ":riscv_top",
+        "@com_google_absl//absl/base:log_severity",
+        "@com_google_absl//absl/flags:flag",
+        "@com_google_absl//absl/flags:parse",
+        "@com_google_absl//absl/log",
+        "@com_google_absl//absl/log:check",
+        "@com_google_absl//absl/log:globals",
+        "@com_google_absl//absl/strings",
+        "@com_google_absl//absl/strings:str_format",
+        "@com_google_absl//absl/time",
+        "@com_google_mpact-sim//mpact/sim/generic:core",
+        "@com_google_mpact-sim//mpact/sim/generic:core_debug_interface",
+        "@com_google_mpact-sim//mpact/sim/generic:counters",
+        "@com_google_mpact-sim//mpact/sim/generic:instruction",
+        "@com_google_mpact-sim//mpact/sim/proto:component_data_cc_proto",
+        "@com_google_mpact-sim//mpact/sim/util/memory",
+        "@com_google_mpact-sim//mpact/sim/util/program_loader:elf_loader",
+        "@com_google_protobuf//:protobuf",
+        "@com_googlesource_code_re2//:re2",
+    ],
+)
+
+cc_binary(
+    name = "rv32_vliw_sim",
+    srcs = [
+        "rv32_vliw_sim.cc",
+    ],
+    copts = ["-O3"],
+    deps = [
+        ":debug_command_shell",
+        ":riscv32_htif_semihost",
+        ":riscv32g_bitmanip_decoder",
+        ":riscv32_vliw_decoder",
         ":riscv_arm_semihost",
         ":riscv_fp_state",
         ":riscv_state",
