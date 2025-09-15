@@ -103,6 +103,8 @@ void RiscVISw(const Instruction* instruction);
 void RiscVISh(const Instruction* instruction);
 void RiscVISb(const Instruction* instruction);
 
+void RiscVExVLIW(const Instruction* instruction);
+
 }  // namespace RV32
 
 namespace RV64 {
@@ -181,6 +183,8 @@ void RiscVISd(const Instruction* instruction);
 void RiscVISw(const Instruction* instruction);
 void RiscVISh(const Instruction* instruction);
 void RiscVISb(const Instruction* instruction);
+
+void RiscVExVLIW(const Instruction* instruction);
 
 }  // namespace RV64
 

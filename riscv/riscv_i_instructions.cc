@@ -333,6 +333,17 @@ void RiscVIBlt(const Instruction* instruction) {
       instruction, [](IntReg a, IntReg b) { return a < b; });
 }
 
+
+void RiscVExVLIW(const Instruction* instruction) {
+  LOG(INFO) << " executing VLIW parent";
+  Instruction* child = instruction->child();
+  while (child != nullptr) {
+    LOG(INFO) << " -> executing child opcode: " << child->opcode();
+    child->Execute();
+    child = child->next();
+  }
+}
+
 void RiscVIBltu(const Instruction* instruction) {
   BranchConditional<RegisterType, UIntReg>(
       instruction, [](UIntReg a, UIntReg b) { return a < b; });
@@ -351,6 +362,18 @@ void RiscVIBgeu(const Instruction* instruction) {
 }  // namespace RV32
 
 namespace RV64 {
+
+
+void RiscVExVLIW(const Instruction* instruction) {
+  LOG(INFO) << " executing VLIW parent";
+  Instruction* child = instruction->child();
+  while (child != nullptr) {
+    LOG(INFO) << " -> executing child opcode: " << child->opcode();
+    child->Execute();
+    child = child->next();
+  }
+}
+
 
 using RegisterType = RV64Register;
 

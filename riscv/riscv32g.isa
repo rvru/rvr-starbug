@@ -1014,7 +1014,7 @@ slot riscv32chints {
       semfunc: "&RiscVINop";
     cli_hint{: x0, I_ci_imm6 : rd},
       disasm: "li", "%rd, %I_ci_imm6",
-      semfunc: "&RiscVINop";
+      semfunc: "&RV32::RiscVExVLIW";
     clui_hint{: I_ci_imm6_12 : rd},
       disasm: "lui", "%rd, 0x%(I_ci_imm6_12:x)",
       semfunc: "&RiscVINop";

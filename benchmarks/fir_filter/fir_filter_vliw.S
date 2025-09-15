@@ -9,12 +9,12 @@
 	.type	fir_filter, @function
 fir_filter:
 	# prologue: allocate stack + save ra,s0, create frame pointer s0 and save args
-	c.li x0,3     # Hint (VLIW 3)
+	# c.li x0,3     # Hint (VLIW 3)
 	addi	sp,sp,-80
 	sw	ra,76(sp)
 	sw	s0,72(sp)
 
-	c.li x0,3     # Hint (VLIW 3)
+	# c.li x0,3     # Hint (VLIW 3)
 	addi	s0,sp,80
 	sw	a0,-52(s0)
 	sw	a1,-56(s0)
@@ -24,19 +24,16 @@ fir_filter:
 	sw	a3,-72(s0)
 	sw	a4,-68(s0)
 
-	c.li x0,2     # Hint (VLIW 2)
+	c.li x0,4     # Hint (VLIW 4)
 	sw	a5,-80(s0)
 	sw	a6,-76(s0)
-
 	# initialize counters / temporaries
-	c.li x0,2     # Hint (VLIW 2)
 	li	a5,0
 	li	a6,0
 
-	c.li x0,2     # Hint (VLIW 2)
+	c.li x0,3     # Hint (VLIW 3)
 	sw	a5,-24(s0)
 	sw	a6,-20(s0)
-
 	j	.L2
 
 .L8:
@@ -74,13 +71,14 @@ fir_filter:
 .L10:
 	# Compute index differences and load table entries
 	# these loads and arithmetic are bundled where dependencies allow
-	c.li x0,4     # Hint (VLIW 4)
+	c.li x0,2     # Hint (VLIW 2)
 	lw	a4,-24(s0)        # a4 = idx1
 	lw	a5,-40(s0)        # a5 = idx2
+
 	sub	a5,a4,a5         # a5 = a4 - a5
 	slli	a5,a5,2         # a5 = byte offset
 
-	c.li x0,4     # Hint (VLIW 4)
+	# c.li x0,4     # Hint (VLIW 4)
 	lw	a4,-52(s0)        # a4 = coeffs_base
 	add	a5,a4,a5         # address = base + offset
 	lw	a5,0(a5)          # load coeff -> a5
@@ -89,10 +87,11 @@ fir_filter:
 	srai	a5,a5,31
 	mv	t2,a5
 
-	c.li x0,4     # Hint (VLIW 4)
+	c.li x0,2     # Hint (VLIW 2)
 	lw	a5,-40(s0)        # a5 = idx2
-	slli	a5,a5,2
 	lw	a4,-56(s0)        # a4 = samples_base
+
+	slli	a5,a5,2
 	add	a5,a4,a5
 
 	lw	a5,0(a5)
@@ -101,12 +100,13 @@ fir_filter:
 	mv	t4,a5
 
 	# multiplies and sums (some parallelism possible)
-	c.li x0,3   # Hint (VLIW 3)
+	c.li x0,2   # Hint (VLIW 2)
 	mul	a4,t2,t3         # a4 = sign(t1)*t3 ?
 	mul	a5,t4,t1
+
 	add	a5,a4,a5
 
-	c.li x0,4     # Hint (VLIW 4)
+	# c.li x0,4     # Hint (VLIW 4)
 	mul	a4,t1,t3
 	mulhu	t6,t1,t3
 	mv	t5,a4
@@ -115,25 +115,25 @@ fir_filter:
 	mv	t6,a5
 
 	# update circular buffers: add and wrap computations
-	c.li x0,3     # Hint (VLIW 3)
+	# c.li x0,3     # Hint (VLIW 3)
 	lw	a2,-32(s0)
 	lw	a3,-28(s0)
 	add	a4,a2,t5
 
-	c.li x0,4     # Hint (VLIW 4)
+	# c.li x0,4     # Hint (VLIW 4)
 	mv	a1,a4
 	sltu	a1,a1,a2
 	add	a5,a3,t6
 	add	a3,a1,a5
 
-	c.li x0,3     # Hint (VLIW 3)
+	# c.li x0,3     # Hint (VLIW 3)
 	mv	a5,a3
 	sw	a4,-32(s0)
 	sw	a5,-28(s0)
 
 .L4:
 	# increment indexes in another circular buffer region
-	c.li x0,6     # Hint (VLIW 6)
+	# c.li x0,6     # Hint (VLIW 6)
 	lw	a2,-40(s0)
 	lw	a3,-36(s0)
 	li	a0,1
@@ -172,7 +172,7 @@ fir_filter:
 
 .L11:
 	# store sample into output array
-	c.li x0,3     # Hint (VLIW 3)
+	# c.li x0,3     # Hint (VLIW 3)
 	lw	a5,-24(s0)
 	slli	a5,a5,2
 	lw	a4,-60(s0)
@@ -196,6 +196,7 @@ fir_filter:
 	sltu	a6,a6,a2
 	add	a5,a3,a1
 	add	a3,a6,a5
+
 	mv	a5,a3
 
 	c.li x0,2     # Hint (VLIW 2)
@@ -225,8 +226,6 @@ fir_filter:
 .L12:
 	nop
 
-	# epilogue: restore callee-saved and return
-	c.li x0,2     # Hint (VLIW 2)
 	lw	ra,76(sp)
 	lw	s0,72(sp)
 

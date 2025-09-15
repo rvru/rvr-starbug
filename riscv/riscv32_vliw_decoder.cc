@@ -112,6 +112,8 @@ generic::Instruction* RiscV32Decoder::DecodeInstruction(uint64_t address) {
       LOG(INFO) << " -> appending child opcode: " << child->opcode() << " name " << isa32::kOpcodeNames[child->opcode()];
       instruction->AppendChild(child);
     }
+    LOG(INFO) << "Resizing parent inst to: " << 2 + 4 * vliw_inst;
+    instruction->set_size(2 + 4 * vliw_inst);
     LOG(INFO) << "Returning parent inst:" << instruction->opcode() << " name " << isa32::kOpcodeNames[instruction->opcode()];
   }
   return instruction;
