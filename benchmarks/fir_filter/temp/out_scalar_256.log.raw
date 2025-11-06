@@ -1,0 +1,280 @@
+[32mComputing main repo mapping:[0m 
+[1A[K[32mLoading:[0m 
+[1A[K[32mLoading:[0m 0 packages loaded
+[1A[K[32mAnalyzing:[0m target //riscv:rv32g_sim (0 packages loaded, 0 targets configured)
+[1A[K[32mAnalyzing:[0m target //riscv:rv32g_sim (0 packages loaded, 0 targets configured)
+[32m[0 / 1][0m [Prepa] BazelWorkspaceStatusAction stable-status.txt
+[1A[K[1A[K[32mINFO: [0mAnalyzed target //riscv:rv32g_sim (0 packages loaded, 0 targets configured).
+[32m[1 / 1][0m checking cached actions
+[1A[K[32mINFO: [0mFound 1 target...
+[32m[1 / 1][0m checking cached actions
+[1A[KTarget //riscv:rv32g_sim up-to-date:
+[32m[1 / 1][0m checking cached actions
+[1A[K  bazel-bin/riscv/rv32g_sim
+[32m[1 / 1][0m checking cached actions
+[1A[K[32mINFO: [0mElapsed time: 0.087s, Critical Path: 0.00s
+[32m[1 / 1][0m checking cached actions
+[1A[K[32mINFO: [0m1 process: 1 internal.
+[32m[1 / 1][0m checking cached actions
+[1A[K[32mINFO: [0mBuild completed successfully, 1 total action
+[32mINFO: [0mRunning command line: bazel-bin/riscv/rv32g_sim --semihost_arm /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/fir_filter/fir_test_scalar.elf
+[0mStarting simulation
+output[0] = 189
+output[1] = 99
+output[2] = 91
+output[3] = -194
+output[4] = -238
+output[5] = -368
+output[6] = -652
+output[7] = 108
+output[8] = 6546
+output[9] = 12117
+output[10] = 21276
+output[11] = 23059
+output[12] = 16451
+output[13] = -8255
+output[14] = -65258
+output[15] = -108682
+output[16] = -123764
+output[17] = -97454
+output[18] = -38787
+output[19] = 24729
+output[20] = 89499
+output[21] = 63545
+output[22] = -21767
+output[23] = -26499
+output[24] = -30304
+output[25] = -29118
+output[26] = 30162
+output[27] = 22138
+output[28] = -2012
+output[29] = -39648
+output[30] = -44324
+output[31] = -55995
+output[32] = -15271
+output[33] = 17352
+output[34] = -118522
+output[35] = -68930
+output[36] = -76158
+output[37] = -41934
+output[38] = -51042
+output[39] = -37531
+output[40] = -21652
+output[41] = -90087
+output[42] = -34083
+output[43] = -11423
+output[44] = 90910
+output[45] = 12983
+output[46] = -59418
+output[47] = -19607
+output[48] = 28223
+output[49] = -9086
+output[50] = 6943
+output[51] = 80042
+output[52] = 73653
+output[53] = 40580
+output[54] = -23432
+output[55] = 12037
+output[56] = -59339
+output[57] = -61529
+output[58] = -61712
+output[59] = -23213
+output[60] = -4370
+output[61] = -15405
+output[62] = 46554
+output[63] = -10214
+output[64] = 54326
+output[65] = -15908
+output[66] = -87899
+output[67] = 2378
+output[68] = -16885
+output[69] = 4723
+output[70] = 31747
+output[71] = -63579
+output[72] = -102643
+output[73] = -93069
+output[74] = -17007
+output[75] = 30052
+output[76] = 48
+output[77] = 37907
+output[78] = -55424
+output[79] = -122582
+output[80] = -83475
+output[81] = -16081
+output[82] = -17095
+output[83] = 80860
+output[84] = 9381
+output[85] = -33304
+output[86] = -41864
+output[87] = -72748
+output[88] = 13490
+output[89] = -45640
+output[90] = -17592
+output[91] = -6512
+output[92] = 4657
+output[93] = -39379
+output[94] = -65342
+output[95] = -38439
+output[96] = 28930
+output[97] = 13385
+output[98] = 10749
+output[99] = 20052
+output[100] = 16433
+output[101] = 43626
+output[102] = -41226
+output[103] = -55334
+output[104] = -60828
+output[105] = -62620
+output[106] = 15823
+output[107] = 38588
+output[108] = 3
+output[109] = 100184
+output[110] = 49324
+output[111] = 56505
+output[112] = 48603
+output[113] = -43973
+output[114] = -60546
+output[115] = 24607
+output[116] = 29378
+output[117] = 34436
+output[118] = -5855
+output[119] = -6940
+output[120] = -86746
+output[121] = -38251
+output[122] = -19113
+output[123] = 61708
+output[124] = 40602
+output[125] = -33705
+output[126] = 20665
+output[127] = -21460
+output[128] = -45066
+output[129] = -74630
+output[130] = -47313
+output[131] = 38113
+output[132] = -54274
+output[133] = 46484
+output[134] = -18223
+output[135] = -36202
+output[136] = -61726
+output[137] = -73464
+output[138] = -1363
+output[139] = -20567
+output[140] = 52661
+output[141] = 13529
+output[142] = 16632
+output[143] = -35773
+output[144] = -8684
+output[145] = 59882
+output[146] = -9222
+output[147] = -61997
+output[148] = -53818
+output[149] = 23670
+output[150] = 90790
+output[151] = 97203
+output[152] = 75449
+output[153] = 82072
+output[154] = 12015
+output[155] = -93442
+output[156] = -47764
+output[157] = -60569
+output[158] = -92058
+output[159] = -126102
+output[160] = -61877
+output[161] = -35285
+output[162] = 6316
+output[163] = 105467
+output[164] = 71496
+output[165] = 33764
+output[166] = 3600
+output[167] = 21393
+output[168] = -3344
+output[169] = 30777
+output[170] = -34843
+output[171] = -94571
+output[172] = -76493
+output[173] = -71090
+output[174] = -29768
+output[175] = -14889
+output[176] = 53107
+output[177] = 18824
+output[178] = -60208
+output[179] = -17847
+output[180] = 31629
+output[181] = 6044
+output[182] = 37218
+output[183] = 1029
+output[184] = -29536
+output[185] = -30583
+output[186] = -61939
+output[187] = 23422
+output[188] = -31411
+output[189] = -44383
+output[190] = -10987
+output[191] = 25218
+output[192] = 28429
+output[193] = 17710
+output[194] = 78254
+output[195] = 23918
+output[196] = 60755
+output[197] = -27789
+output[198] = 90579
+output[199] = -22110
+output[200] = -11861
+output[201] = -3687
+output[202] = -55186
+output[203] = -37105
+output[204] = -13469
+output[205] = 39291
+output[206] = -80720
+output[207] = 2212
+output[208] = -84379
+output[209] = -41329
+output[210] = 56714
+output[211] = -31895
+output[212] = 78332
+output[213] = 26442
+output[214] = -65751
+output[215] = 20342
+output[216] = -16493
+output[217] = 44625
+output[218] = 51768
+output[219] = 16656
+output[220] = -22514
+output[221] = -126862
+output[222] = -51144
+output[223] = -41210
+output[224] = 46187
+output[225] = 65628
+output[226] = -13193
+output[227] = 16756
+output[228] = -102145
+output[229] = -85347
+output[230] = -51055
+output[231] = -36587
+output[232] = -1609
+output[233] = 25293
+output[234] = -872
+output[235] = -22715
+output[236] = 37931
+output[237] = 34302
+output[238] = -260
+output[239] = 14290
+output[240] = 64388
+output[241] = 2499
+output[242] = 66061
+output[243] = 2285
+output[244] = -40838
+output[245] = -5396
+output[246] = -39369
+output[247] = 36931
+output[248] = 12365
+output[249] = 30236
+output[250] = -452
+output[251] = 19880
+output[252] = -24689
+output[253] = -5053
+output[254] = -26137
+output[255] = 70678
+Simulation done: 0.0 sec
+
+Cycle count = 483725

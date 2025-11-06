@@ -1,0 +1,2 @@
+Command failed: make clean && make vliw && make scalar && make empty
+Command 'script -q script_output.log bash -c "make clean && make vliw && make scalar && make empty" >/dev/null 2>&1' returned non-zero exit status 2.

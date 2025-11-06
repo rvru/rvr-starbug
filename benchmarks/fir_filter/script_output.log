@@ -1,0 +1,16 @@
+rm -f *.o *.elf *.bin *.hex *.dump
+/opt/homebrew/bin/riscv64-unknown-elf-gcc -O2 -march=rv32imac -mabi=ilp32 -Wall -march=rv32imac -specs=semihost.specs -mabi=ilp32 -T link.ld -o fir_test_vliw.elf fir_main.c fir_filter_vliw_unrolled.S data.S
+/opt/homebrew/Cellar/riscv-gnu-toolchain/main/lib/gcc/riscv64-unknown-elf/14.2.0/../../../../riscv64-unknown-elf/bin/ld: warning: fir_test_vliw.elf has a LOAD segment with RWX permissions
+/opt/homebrew/bin/riscv64-unknown-elf-size fir_test_vliw.elf
+   text	   data	    bss	    dec	    hex	filename
+  52656	  67332	    940	 120928	  1d860	fir_test_vliw.elf
+/opt/homebrew/bin/riscv64-unknown-elf-gcc -O2 -march=rv32imac -mabi=ilp32 -Wall -march=rv32imac -specs=semihost.specs -mabi=ilp32 -T link.ld -o fir_test_scalar.elf fir_main.c fir_filter_scalar.c data.S
+/opt/homebrew/Cellar/riscv-gnu-toolchain/main/lib/gcc/riscv64-unknown-elf/14.2.0/../../../../riscv64-unknown-elf/bin/ld: warning: fir_test_scalar.elf has a LOAD segment with RWX permissions
+/opt/homebrew/bin/riscv64-unknown-elf-size fir_test_scalar.elf
+   text	   data	    bss	    dec	    hex	filename
+  52496	  67332	    940	 120768	  1d7c0	fir_test_scalar.elf
+/opt/homebrew/bin/riscv64-unknown-elf-gcc -O2 -march=rv32imac -mabi=ilp32 -Wall -march=rv32imac -specs=semihost.specs -mabi=ilp32 -T link.ld -o fir_test_empty.elf fir_main.c fir_filter_empty.c data.S
+/opt/homebrew/Cellar/riscv-gnu-toolchain/main/lib/gcc/riscv64-unknown-elf/14.2.0/../../../../riscv64-unknown-elf/bin/ld: warning: fir_test_empty.elf has a LOAD segment with RWX permissions
+/opt/homebrew/bin/riscv64-unknown-elf-size fir_test_empty.elf
+   text	   data	    bss	    dec	    hex	filename
+  52160	  67332	    940	 120432	  1d670	fir_test_empty.elf

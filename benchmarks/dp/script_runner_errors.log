@@ -1,0 +1,20 @@
+Command failed: make clean && make vliw && make scalar && make empty
+Command 'script -q script_output.log bash -c "make clean && make vliw && make scalar && make empty" >/dev/null 2>&1' returned non-zero exit status 2.
+Command failed: make clean && make vliw && make scalar && make empty
+Command 'script -q script_output.log bash -c "make clean && make vliw && make scalar && make empty" >/dev/null 2>&1' returned non-zero exit status 2.
+Command failed: make clean && make vliw && make scalar && make empty
+Command 'script -q script_output.log bash -c "make clean && make vliw && make scalar && make empty" >/dev/null 2>&1' returned non-zero exit status 2.
+Command failed: make clean && make vliw && make scalar && make empty
+Command 'script -q script_output.log bash -c "make clean && make vliw && make scalar && make empty" >/dev/null 2>&1' returned non-zero exit status 2.
+Command failed: make clean && make vliw && make scalar && make empty
+Command 'script -q script_output.log bash -c "make clean && make vliw && make scalar && make empty" >/dev/null 2>&1' returned non-zero exit status 2.
+Command failed: make clean && make vliw && make scalar && make empty
+Command 'script -q script_output.log bash -c "make clean && make vliw && make scalar && make empty" >/dev/null 2>&1' returned non-zero exit status 2.
+Command failed: make clean && make vliw && make scalar && make empty
+Command 'script -q script_output.log bash -c "make clean && make vliw && make scalar && make empty" >/dev/null 2>&1' returned non-zero exit status 2.
+Command failed: python gen_data.py 2048 > data.S
+Command 'script -q script_output.log bash -c "python gen_data.py 2048 > data.S" >/dev/null 2>&1' returned non-zero exit status 2.
+Command failed: make clean && make vliw && make scalar && make empty
+Command 'script -q script_output.log bash -c "make clean && make vliw && make scalar && make empty" >/dev/null 2>&1' returned non-zero exit status 2.
+Command failed: make clean && make vliw && make scalar && make empty
+Command 'script -q script_output.log bash -c "make clean && make vliw && make scalar && make empty" >/dev/null 2>&1' returned non-zero exit status 2.

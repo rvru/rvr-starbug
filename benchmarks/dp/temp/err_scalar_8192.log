@@ -1,0 +1,36 @@
+[32mComputing main repo mapping:[0m 
+
+[1A[K[32mLoading:[0m 
+
+[1A[K[32mLoading:[0m 0 packages loaded
+
+[1A[K[32mAnalyzing:[0m target //riscv:rv32g_sim (0 packages loaded, 0 targets configured)
+
+[1A[K[32mAnalyzing:[0m target //riscv:rv32g_sim (0 packages loaded, 0 targets configured)
+[32m[0 / 1][0m [Prepa] BazelWorkspaceStatusAction stable-status.txt
+
+[1A[K
+[1A[K[32mINFO: [0mAnalyzed target //riscv:rv32g_sim (0 packages loaded, 0 targets configured).
+[32m[1 / 1][0m checking cached actions
+
+[1A[K[32mINFO: [0mFound 1 target...
+[32m[1 / 1][0m checking cached actions
+
+[1A[KTarget //riscv:rv32g_sim up-to-date:
+[32m[1 / 1][0m checking cached actions
+
+[1A[K  bazel-bin/riscv/rv32g_sim
+[32m[1 / 1][0m checking cached actions
+
+[1A[K[32mINFO: [0mElapsed time: 0.065s, Critical Path: 0.00s
+[32m[1 / 1][0m checking cached actions
+
+[1A[K[32mINFO: [0m1 process: 1 internal.
+[32m[1 / 1][0m checking cached actions
+
+[1A[K[32mINFO: [0mBuild completed successfully, 1 total action
+[32mINFO: [0mRunning command line: bazel-bin/riscv/rv32g_sim --semihost_arm /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/dp/dp_scalar.elf
+[0mStarting simulation
+Simulation done: 0.8 sec
+
+Cycle count = 16608748

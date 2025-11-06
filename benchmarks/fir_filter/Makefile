@@ -16,9 +16,11 @@ DRIVER = fir_main.c
 DATA = data.S
 
 SCALAR_SRC = fir_filter_scalar.c
-VLIW_SRC = fir_filter_vliw.S
+VLIW_SRC = fir_filter_vliw_unrolled.S
+EMPTY_SRC = fir_filter_empty.c
 
 SCALAR_ELF = fir_test_scalar.elf
+EMPTY_ELF = fir_test_empty.elf
 VLIW_ELF = fir_test_vliw.elf
 
 .PHONY: all scalar vliw dump clean
@@ -27,12 +29,17 @@ all: scalar vliw
 
 scalar: $(SCALAR_ELF)
 vliw:  $(VLIW_ELF)
+empty: $(EMPTY_ELF)
 
 $(SCALAR_ELF): $(DRIVER) $(SCALAR_SRC) $(DATA)
 	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^
 	$(SIZE) $@
 
 $(VLIW_ELF): $(DRIVER) $(VLIW_SRC) $(DATA)
+	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^
+	$(SIZE) $@
+
+$(EMPTY_ELF): $(DRIVER) $(EMPTY_SRC) $(DATA)
 	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^
 	$(SIZE) $@
 

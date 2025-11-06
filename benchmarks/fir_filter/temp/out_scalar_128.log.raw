@@ -1,0 +1,152 @@
+[32mComputing main repo mapping:[0m 
+[1A[K[32mLoading:[0m 
+[1A[K[32mLoading:[0m 0 packages loaded
+[1A[K[32mAnalyzing:[0m target //riscv:rv32g_sim (0 packages loaded, 0 targets configured)
+[1A[K[32mAnalyzing:[0m target //riscv:rv32g_sim (0 packages loaded, 0 targets configured)
+[32m[0 / 1][0m [Prepa] BazelWorkspaceStatusAction stable-status.txt
+[1A[K[1A[K[32mINFO: [0mAnalyzed target //riscv:rv32g_sim (0 packages loaded, 0 targets configured).
+[32m[1 / 1][0m checking cached actions
+[1A[K[32mINFO: [0mFound 1 target...
+[32m[1 / 1][0m checking cached actions
+[1A[KTarget //riscv:rv32g_sim up-to-date:
+[32m[1 / 1][0m checking cached actions
+[1A[K  bazel-bin/riscv/rv32g_sim
+[32m[1 / 1][0m checking cached actions
+[1A[K[32mINFO: [0mElapsed time: 0.083s, Critical Path: 0.00s
+[32m[1 / 1][0m checking cached actions
+[1A[K[32mINFO: [0m1 process: 1 internal.
+[32m[1 / 1][0m checking cached actions
+[1A[K[32mINFO: [0mBuild completed successfully, 1 total action
+[32mINFO: [0mRunning command line: bazel-bin/riscv/rv32g_sim --semihost_arm /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/fir_filter/fir_test_scalar.elf
+[0mStarting simulation
+output[0] = -320
+output[1] = -128
+output[2] = 1005
+output[3] = 333
+output[4] = -1008
+output[5] = 1127
+output[6] = -694
+output[7] = -1060
+output[8] = 14054
+output[9] = 20578
+output[10] = -50752
+output[11] = -93828
+output[12] = 76969
+output[13] = 78185
+output[14] = -90438
+output[15] = 129072
+output[16] = 115182
+output[17] = -253689
+output[18] = 127835
+output[19] = 664
+output[20] = -152465
+output[21] = 7407
+output[22] = 8869
+output[23] = -86309
+output[24] = 134543
+output[25] = -32460
+output[26] = 176797
+output[27] = 23925
+output[28] = -178372
+output[29] = 71110
+output[30] = -206838
+output[31] = 120832
+output[32] = -31135
+output[33] = -124574
+output[34] = 55503
+output[35] = -14855
+output[36] = 145263
+output[37] = -162745
+output[38] = 56371
+output[39] = 93094
+output[40] = -227901
+output[41] = 116332
+output[42] = -50496
+output[43] = 195864
+output[44] = 65206
+output[45] = -199390
+output[46] = -34716
+output[47] = -72939
+output[48] = 26336
+output[49] = -104130
+output[50] = 13921
+output[51] = 321679
+output[52] = -77934
+output[53] = -115258
+output[54] = 192183
+output[55] = 130152
+output[56] = -116639
+output[57] = 31722
+output[58] = 447
+output[59] = -155564
+output[60] = -130139
+output[61] = 8058
+output[62] = 23249
+output[63] = -129015
+output[64] = 282397
+output[65] = -86270
+output[66] = -206070
+output[67] = 241659
+output[68] = -81514
+output[69] = 20597
+output[70] = 11373
+output[71] = 62628
+output[72] = 86063
+output[73] = -185540
+output[74] = -19964
+output[75] = 15801
+output[76] = -32174
+output[77] = -22112
+output[78] = 107641
+output[79] = 96735
+output[80] = -119923
+output[81] = -115747
+output[82] = -86834
+output[83] = -84800
+output[84] = -12891
+output[85] = -131877
+output[86] = 190206
+output[87] = 7052
+output[88] = 27895
+output[89] = 64461
+output[90] = -143956
+output[91] = 35056
+output[92] = -9961
+output[93] = -108193
+output[94] = 58308
+output[95] = -9259
+output[96] = -70542
+output[97] = -10489
+output[98] = -17438
+output[99] = -19383
+output[100] = 237251
+output[101] = -16726
+output[102] = -155426
+output[103] = 170006
+output[104] = 7443
+output[105] = -141145
+output[106] = 205248
+output[107] = -83092
+output[108] = -35270
+output[109] = -1925
+output[110] = 64599
+output[111] = 68212
+output[112] = -53344
+output[113] = 89995
+output[114] = -49146
+output[115] = -98855
+output[116] = -36251
+output[117] = 74528
+output[118] = 184007
+output[119] = 108709
+output[120] = 123977
+output[121] = 57806
+output[122] = -93960
+output[123] = 49980
+output[124] = -183090
+output[125] = 19840
+output[126] = 135731
+output[127] = -200896
+Simulation done: 0.0 sec
+
+Cycle count = 241210

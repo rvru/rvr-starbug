@@ -35,7 +35,7 @@ def emit(name, array, alignment='8'):
 if len(sys.argv) > 1:
   n_samples = int(sys.argv[1])
 else:
-  n_samples = 64
+  n_samples = 4096
 
 # Number of FIR filter taps
 n_taps = 5
