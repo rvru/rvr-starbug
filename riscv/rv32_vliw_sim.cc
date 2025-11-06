@@ -498,9 +498,14 @@ int main(int argc, char** argv) {
     double sec = static_cast<double>(duration / absl::Milliseconds(100)) / 10;
     counter_sec.SetValue(sec);
 
-    if (!quiet)
+    if (!quiet) {
       std::cerr << absl::StrFormat("Simulation done: %0.1f sec\n", sec)
                 << std::endl;
+      absl::StatusOr<uint64_t> cycles = riscv_top.ReadRegister("mcycle");
+      if (cycles.ok()) {
+        std::cerr << "Cycle count = " << *cycles << "\n";
+      }      
+    }
   }
 
   // Export counters.

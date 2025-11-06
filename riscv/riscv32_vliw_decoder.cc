@@ -107,13 +107,17 @@ generic::Instruction* RiscV32Decoder::DecodeInstruction(uint64_t address) {
     uint32_t vliw_inst = instruction->Source(1)->AsUint32(0);
     LOG(INFO) << "HINT detected. Expecting " << vliw_inst << " VLIW inst.";
 
-    for (int i = 0; i < vliw_inst; i++) {
-      generic::Instruction *child = DecodeInstruction(address + 2 + 4 * i);
+    uint64_t offset = 2; // Start offset by 2 bytes of the HINT
+    uint8_t instructions_left = vliw_inst;
+    while (instructions_left > 0) {
+      generic::Instruction *child = DecodeInstruction(address + offset);
       LOG(INFO) << " -> appending child opcode: " << child->opcode() << " name " << isa32::kOpcodeNames[child->opcode()];
       instruction->AppendChild(child);
+      offset += child->size();
+      instructions_left--;
     }
-    LOG(INFO) << "Resizing parent inst to: " << 2 + 4 * vliw_inst;
-    instruction->set_size(2 + 4 * vliw_inst);
+    LOG(INFO) << "Resizing parent inst to: " << offset;
+    instruction->set_size(offset);
     LOG(INFO) << "Returning parent inst:" << instruction->opcode() << " name " << isa32::kOpcodeNames[instruction->opcode()];
   }
   return instruction;
