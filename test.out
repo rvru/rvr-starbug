@@ -1,0 +1,10 @@
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+WARNING: Target pattern parsing failed.
+ERROR: Skipping ':rv32_vliw_sim': no such target '//:rv32_vliw_sim': target 'rv32_vliw_sim' not declared in package '' defined by /Users/leomarek/ZedProjects/mpact-riscv/BUILD
+ERROR: no such target '//:rv32_vliw_sim': target 'rv32_vliw_sim' not declared in package '' defined by /Users/leomarek/ZedProjects/mpact-riscv/BUILD
+INFO: Elapsed time: 0.094s
+INFO: 0 processes.
+ERROR: Build did NOT complete successfully
+ERROR: Build failed. Not running target

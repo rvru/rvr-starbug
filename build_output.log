@@ -1,0 +1,193 @@
+Starting local Bazel server and connecting to it...
+Computing main repo mapping: 
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: 133 targets (3 packages loaded, 0 targets configured)
+Analyzing: 133 targets (3 packages loaded, 0 targets configured)
+[0 / 1] checking cached actions
+Analyzing: 133 targets (100 packages loaded, 1541 targets configured)
+[1 / 1] checking cached actions
+Analyzing: 133 targets (106 packages loaded, 1580 targets configured)
+[1 / 1] checking cached actions
+Analyzing: 133 targets (106 packages loaded, 1580 targets configured)
+[1 / 1] checking cached actions
+Analyzing: 133 targets (117 packages loaded, 2217 targets configured)
+[1 / 1] checking cached actions
+INFO: Analyzed 133 targets (126 packages loaded, 3438 targets configured).
+[37 / 1,185] Compiling absl/time/internal/cctz/src/time_zone_format.cc; 0s darwin-sandbox ... (12 actions, 11 running)
+[347 / 1,647] Compiling absl/status/statusor.cc [for tool]; 0s darwin-sandbox ... (12 actions running)
+[424 / 1,691] Executing genrule @@com_google_mpact-sim//mpact/sim/decoder:antlr_isa_lexer_source [for tool]; 0s darwin-sandbox ... (12 actions running)
+[441 / 1,691] Compiling absl/log/globals.cc [for tool]; 1s darwin-sandbox ... (12 actions running)
+[478 / 1,691] Compiling absl/flags/internal/usage.cc [for tool]; 2s darwin-sandbox ... (12 actions running)
+[501 / 1,691] Compiling absl/strings/cord.cc [for tool]; 1s darwin-sandbox ... (13 actions, 12 running)
+[527 / 1,691] Compiling absl/strings/internal/cord_rep_btree.cc [for tool]; 1s darwin-sandbox ... (12 actions, 11 running)
+[560 / 1,691] Compiling absl/flags/parse.cc [for tool]; 2s darwin-sandbox ... (13 actions, 12 running)
+[579 / 1,691] Compiling absl/crc/internal/crc_x86_arm_combined.cc [for tool]; 0s darwin-sandbox ... (13 actions, 12 running)
+[589 / 1,691] Compiling absl/crc/internal/crc_x86_arm_combined.cc [for tool]; 1s darwin-sandbox ... (13 actions, 12 running)
+[606 / 1,691] Compiling re2/prefilter.cc [for tool]; 0s darwin-sandbox ... (13 actions, 12 running)
+[621 / 1,691] Compiling src/google/protobuf/compiler/command_line_interface.cc [for tool]; 1s darwin-sandbox ... (13 actions, 12 running)
+[640 / 1,691] Compiling src/google/protobuf/compiler/command_line_interface.cc [for tool]; 2s darwin-sandbox ... (13 actions, 12 running)
+[653 / 1,691] Compiling src/google/protobuf/compiler/command_line_interface.cc [for tool]; 3s darwin-sandbox ... (13 actions, 12 running)
+[669 / 1,691] Compiling re2/dfa.cc [for tool]; 1s darwin-sandbox ... (13 actions, 12 running)
+[685 / 1,691] Compiling src/google/protobuf/compiler/cpp/enum.cc [for tool]; 1s darwin-sandbox ... (13 actions, 12 running)
+INFO: From Compiling src/google/protobuf/stubs/strutil.cc [for tool]:
+external/protobuf~/src/google/protobuf/stubs/strutil.cc:506:11: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+          sprintf(dest + used, (use_hex ? "\\x%02x" : "\\%03o"),
+          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/include/stdio.h:180:1: note: 'sprintf' has been explicitly marked deprecated here
+__deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/include/sys/cdefs.h:218:48: note: expanded from macro '__deprecated_msg'
+        #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+                                                      ^
+1 warning generated.
+INFO: From Compiling src/google/protobuf/stubs/strutil.cc:
+external/protobuf~/src/google/protobuf/stubs/strutil.cc:506:11: warning: 'sprintf' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+          sprintf(dest + used, (use_hex ? "\\x%02x" : "\\%03o"),
+          ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/include/stdio.h:180:1: note: 'sprintf' has been explicitly marked deprecated here
+__deprecated_msg("This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead.")
+^
+/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/usr/include/sys/cdefs.h:218:48: note: expanded from macro '__deprecated_msg'
+        #define __deprecated_msg(_msg) __attribute__((__deprecated__(_msg)))
+                                                      ^
+1 warning generated.
+[702 / 1,691] Compiling src/google/protobuf/descriptor.cc; 2s darwin-sandbox ... (13 actions, 12 running)
+[715 / 1,691] Compiling src/google/protobuf/descriptor.cc; 3s darwin-sandbox ... (13 actions, 11 running)
+[728 / 1,691] Compiling src/google/protobuf/wire_format.cc; 1s darwin-sandbox ... (12 actions, 11 running)
+[740 / 1,691] Compiling src/google/protobuf/util/internal/utility.cc; 1s darwin-sandbox ... (13 actions, 11 running)
+[751 / 1,691] Compiling src/google/protobuf/util/internal/protostream_objectwriter.cc; 1s darwin-sandbox ... (12 actions, 11 running)
+[762 / 1,691] Compiling src/google/protobuf/extension_set.cc [for tool]; 2s darwin-sandbox ... (12 actions, 11 running)
+[775 / 1,691] Compiling src/google/protobuf/wire_format.cc [for tool]; 2s darwin-sandbox ... (13 actions, 11 running)
+[787 / 1,691] Compiling src/google/protobuf/compiler/cpp/file.cc [for tool]; 2s darwin-sandbox ... (12 actions, 11 running)
+[798 / 1,691] Compiling src/google/protobuf/compiler/cpp/file.cc [for tool]; 3s darwin-sandbox ... (11 actions, 10 running)
+[809 / 1,691] Compiling src/google/protobuf/util/internal/utility.cc [for tool]; 1s darwin-sandbox ... (12 actions, 11 running)
+[819 / 1,691] Compiling src/google/protobuf/util/internal/type_info.cc [for tool]; 1s darwin-sandbox ... (12 actions, 11 running)
+[832 / 1,691] Compiling src/google/protobuf/util/internal/protostream_objectwriter.cc [for tool]; 1s darwin-sandbox ... (13 actions, 11 running)
+[843 / 1,691] Compiling src/google/protobuf/util/internal/proto_writer.cc [for tool]; 1s darwin-sandbox ... (12 actions, 11 running)
+[858 / 1,691] Compiling src/google/protobuf/compiler/cpp/helpers.cc [for tool]; 2s darwin-sandbox ... (13 actions, 11 running)
+[867 / 1,691] Compiling src/google/protobuf/util/internal/default_value_objectwriter.cc [for tool]; 1s darwin-sandbox ... (13 actions, 11 running)
+[876 / 1,691] Compiling src/google/protobuf/util/message_differencer.cc [for tool]; 2s darwin-sandbox ... (12 actions, 11 running)
+[884 / 1,691] Compiling src/google/protobuf/util/message_differencer.cc [for tool]; 3s darwin-sandbox ... (13 actions, 12 running)
+[896 / 1,691] Compiling src/google/protobuf/compiler/cpp/message.cc [for tool]; 1s darwin-sandbox ... (13 actions, 12 running)
+[903 / 1,691] Compiling src/google/protobuf/compiler/cpp/message.cc [for tool]; 2s darwin-sandbox ... (13 actions, 12 running)
+[912 / 1,691] Compiling src/google/protobuf/compiler/cpp/message.cc [for tool]; 3s darwin-sandbox ... (13 actions, 12 running)
+[922 / 1,691] Compiling src/google/protobuf/compiler/cpp/message.cc [for tool]; 4s darwin-sandbox ... (13 actions, 12 running)
+[932 / 1,691] Compiling src/google/protobuf/compiler/cpp/message.cc [for tool]; 5s darwin-sandbox ... (13 actions, 12 running)
+[937 / 1,691] Compiling src/google/protobuf/descriptor_database.cc [for tool]; 2s darwin-sandbox ... (13 actions, 12 running)
+[945 / 1,691] Compiling src/google/protobuf/descriptor.pb.cc [for tool]; 3s darwin-sandbox ... (13 actions, 12 running)
+[955 / 1,691] Compiling src/google/protobuf/descriptor.cc [for tool]; 3s darwin-sandbox ... (13 actions, 12 running)
+INFO: From Compiling mpact/sim/util/asm/simple_assembler.cc:
+external/com_google_mpact-sim/mpact/sim/util/asm/simple_assembler.cc:304:8: warning: variable 'own_zero_resolver' set but not used [-Wunused-but-set-variable]
+  bool own_zero_resolver = false;
+       ^
+1 warning generated.
+[966 / 1,691] Compiling src/google/protobuf/descriptor.cc [for tool]; 4s darwin-sandbox ... (13 actions, 11 running)
+[975 / 1,691] Compiling src/google/protobuf/descriptor.cc [for tool]; 5s darwin-sandbox ... (13 actions, 12 running)
+[982 / 1,691] Compiling src/google/protobuf/descriptor.cc [for tool]; 6s darwin-sandbox ... (13 actions, 12 running)
+[988 / 1,691] Compiling src/google/protobuf/descriptor.cc [for tool]; 7s darwin-sandbox ... (12 actions running)
+[1,002 / 1,691] Compiling src/google/protobuf/descriptor.cc [for tool]; 8s darwin-sandbox ... (13 actions, 12 running)
+[1,016 / 1,691] Compiling src/google/protobuf/compiler/php/php_generator.cc [for tool]; 1s darwin-sandbox ... (13 actions, 12 running)
+[1,027 / 1,691] Compiling src/google/protobuf/compiler/php/php_generator.cc [for tool]; 2s darwin-sandbox ... (13 actions, 12 running)
+[1,038 / 1,691] Compiling src/google/protobuf/compiler/php/php_generator.cc [for tool]; 3s darwin-sandbox ... (13 actions, 12 running)
+[1,053 / 1,691] Compiling src/google/protobuf/compiler/objectivec/objectivec_helpers.cc [for tool]; 1s darwin-sandbox ... (13 actions, 12 running)
+[1,057 / 1,691] Compiling src/google/protobuf/compiler/objectivec/objectivec_helpers.cc [for tool]; 2s darwin-sandbox ... (13 actions, 12 running)
+[1,069 / 1,691] Compiling src/google/protobuf/wire_format.cc; 2s darwin-sandbox ... (13 actions, 12 running)
+[1,075 / 1,691] Compiling re2/prefilter_tree.cc; 1s darwin-sandbox ... (13 actions, 12 running)
+[1,081 / 1,691] Compiling external/com_google_mpact-sim/mpact/sim/decoder/InstructionSetParser.cpp [for tool]; 2s darwin-sandbox ... (13 actions, 12 running)
+[1,090 / 1,691] Compiling external/com_google_mpact-sim/mpact/sim/decoder/InstructionSetParser.cpp [for tool]; 3s darwin-sandbox ... (13 actions, 12 running)
+[1,096 / 1,691] Compiling external/com_google_mpact-sim/mpact/sim/decoder/InstructionSetParser.cpp [for tool]; 4s darwin-sandbox ... (13 actions, 12 running)
+[1,101 / 1,691] Compiling external/com_google_mpact-sim/mpact/sim/decoder/InstructionSetParser.cpp [for tool]; 5s darwin-sandbox ... (13 actions, 12 running)
+[1,109 / 1,691] Compiling mpact/sim/decoder/slot.cc [for tool]; 3s darwin-sandbox ... (13 actions, 12 running)
+[1,119 / 1,691] Compiling mpact/sim/decoder/slot.cc [for tool]; 4s darwin-sandbox ... (13 actions, 12 running)
+[1,127 / 1,691] Compiling absl/flags/reflection.cc; 1s darwin-sandbox ... (13 actions, 12 running)
+[1,135 / 1,691] Compiling src/google/protobuf/reflection_ops.cc; 1s darwin-sandbox ... (13 actions, 12 running)
+[1,145 / 1,691] Compiling riscv/test/librenode_mpact_riscv64_so_test.cc; 1s darwin-sandbox ... (13 actions, 12 running)
+[1,152 / 1,691] Compiling mpact/sim/decoder/overlay.cc [for tool]; 1s darwin-sandbox ... (13 actions, 12 running)
+[1,161 / 1,691] Compiling src/google/protobuf/message.cc; 1s darwin-sandbox ... (13 actions, 12 running)
+[1,172 / 1,691] Compiling mpact/sim/generic/program_error.cc; 1s darwin-sandbox ... (12 actions, 11 running)
+[1,178 / 1,691] Compiling mpact/sim/decoder/instruction_group.cc [for tool]; 2s darwin-sandbox ... (13 actions, 12 running)
+[1,186 / 1,691] Compiling mpact/sim/decoder/instruction_set_visitor.cc [for tool]; 2s darwin-sandbox ... (13 actions, 12 running)
+[1,194 / 1,691] Compiling mpact/sim/decoder/instruction_set_visitor.cc [for tool]; 3s darwin-sandbox ... (13 actions, 12 running)
+[1,206 / 1,691] Compiling mpact/sim/decoder/instruction_set_visitor.cc [for tool]; 4s darwin-sandbox ... (13 actions, 12 running)
+[1,215 / 1,691] Compiling mpact/sim/decoder/instruction_set_visitor.cc [for tool]; 5s darwin-sandbox ... (13 actions, 12 running)
+[1,222 / 1,691] Compiling mpact/sim/decoder/instruction_set_visitor.cc [for tool]; 6s darwin-sandbox ... (13 actions, 12 running)
+[1,228 / 1,691] Compiling mpact/sim/decoder/instruction_set_visitor.cc [for tool]; 7s darwin-sandbox ... (12 actions running)
+[1,237 / 1,691] Compiling mpact/sim/decoder/format.cc [for tool]; 2s darwin-sandbox ... (13 actions, 12 running)
+[1,243 / 1,691] Compiling mpact/sim/decoder/encoding_group.cc [for tool]; 3s darwin-sandbox ... (13 actions, 12 running)
+ERROR: /private/var/tmp/_bazel_leomarek/235c02f21ec6a6b62251b76e4bc0c4e7/external/com_google_protobuf/src/google/protobuf/util/BUILD.bazel:112:11: Compiling src/google/protobuf/util/field_mask_util.cc failed: (Exit 1): sandbox-exec failed: error executing CppCompile command 
+  (cd /private/var/tmp/_bazel_leomarek/235c02f21ec6a6b62251b76e4bc0c4e7/sandbox/darwin-sandbox/804/execroot/_main && \
+  exec env - \
+    BAZEL_CXXOPTS='-std=c++17' \
+    CC=clang \
+    PATH='/Users/leomarek/Library/Caches/bazelisk/downloads/sha256/64b0832fd6c57635b9de3711d51beca9c4bf99c6bb3b663249cdbfdca16fb9f1/bin:/opt/homebrew/opt/protobuf@21/bin:/opt/homebrew/opt/llvm@15/bin:/opt/homebrew/opt/llvm/bin:/Users/leomarek/.cargo/bin:/Users/leomarek/.nvm/versions/node/v14.21.3/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/X11/bin:/Library/Apple/usr/bin:/Applications/VMware Fusion.app/Contents/Public:/Users/leomarek/.cargo/bin:/Users/leomarek/.nvm/versions/node/v14.21.3/bin:/Users/leomarek/Library/Application Support/JetBrains/Toolbox/scripts' \
+    PWD=/proc/self/cwd \
+    TMPDIR=/var/folders/x2/7sm6pqw14cb82kx1q8zrvfc80000gn/T/ \
+  /usr/bin/sandbox-exec -f /private/var/tmp/_bazel_leomarek/235c02f21ec6a6b62251b76e4bc0c4e7/sandbox/darwin-sandbox/804/sandbox.sb /var/tmp/_bazel_leomarek/install/a92f3134f8cc71f2556aa33035764d25/process-wrapper '--timeout=0' '--kill_delay=15' '--stats=/private/var/tmp/_bazel_leomarek/235c02f21ec6a6b62251b76e4bc0c4e7/sandbox/darwin-sandbox/804/stats.out' external/bazel_tools~cc_configure_extension~local_config_cc/cc_wrapper.sh -U_FORTIFY_SOURCE -fstack-protector -Wall -Wthread-safety -Wself-assign -Wunused-but-set-parameter -Wno-free-nonheap-object -fcolor-diagnostics -fno-omit-frame-pointer '-std=c++17' -MD -MF bazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/util/_objs/field_mask_util/field_mask_util.d '-frandom-seed=bazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/util/_objs/field_mask_util/field_mask_util.o' -iquote external/com_google_protobuf -iquote bazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf -iquote external/com_google_absl -iquote bazel-out/darwin_arm64-fastbuild/bin/external/com_google_absl -iquote external/zlib -iquote bazel-out/darwin_arm64-fastbuild/bin/external/zlib -iquote external/protobuf~ -iquote bazel-out/darwin_arm64-fastbuild/bin/external/protobuf~ -iquote external/zlib~ -iquote bazel-out/darwin_arm64-fastbuild/bin/external/zlib~ -Ibazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/util/_virtual_includes/field_mask_util -Ibazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/_virtual_includes/protobuf -Ibazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/_virtual_includes/internal_visibility -Ibazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/_virtual_includes/port -Ibazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/_virtual_includes/protobuf_lite -Ibazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/_virtual_includes/arena -Ibazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/_virtual_includes/arena_align -Ibazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/stubs/_virtual_includes/lite -Ibazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/_virtual_includes/arena_allocation_policy -Ibazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/_virtual_includes/arena_cleanup -Ibazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/_virtual_includes/string_block -Ibazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/_virtual_includes/varint_shuffle -Ibazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/io/_virtual_includes/io -Ibazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/io/_virtual_includes/io_win32 -Ibazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/third_party/utf8_range/_virtual_includes/utf8_validity -Ibazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/third_party/utf8_range/_virtual_includes/utf8_range -Ibazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/io/_virtual_includes/gzip_stream -Ibazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/stubs/_virtual_includes/stubs -Ibazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/io/_virtual_includes/printer -Ibazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/io/_virtual_includes/zero_copy_sink -Ibazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/io/_virtual_includes/tokenizer -Ibazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/_virtual_includes/field_mask_proto -isystem external/zlib/zlib/include -isystem bazel-out/darwin_arm64-fastbuild/bin/external/zlib/zlib/include -isystem external/protobuf~/src -isystem bazel-out/darwin_arm64-fastbuild/bin/external/protobuf~/src -isystem external/zlib~/zlib/include -isystem bazel-out/darwin_arm64-fastbuild/bin/external/zlib~/zlib/include '-mmacosx-version-min=15.1' -Wno-unused-function '-std=c++17' -DHAVE_ZLIB -Woverloaded-virtual -Wno-sign-compare -Wno-nonnull -Werror -no-canonical-prefixes -Wno-builtin-macro-redefined '-D__DATE__="redacted"' '-D__TIMESTAMP__="redacted"' '-D__TIME__="redacted"' -c external/com_google_protobuf/src/google/protobuf/util/field_mask_util.cc -o bazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/util/_objs/field_mask_util/field_mask_util.o)
+In file included from external/com_google_protobuf/src/google/protobuf/util/field_mask_util.cc:8:
+In file included from bazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/util/_virtual_includes/field_mask_util/google/protobuf/util/field_mask_util.h:17:
+bazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/_virtual_includes/field_mask_proto/google/protobuf/field_mask.pb.h:12:2: error: This file was generated by a newer version of protoc which is
+#error This file was generated by a newer version of protoc which is
+ ^
+bazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/_virtual_includes/field_mask_proto/google/protobuf/field_mask.pb.h:13:2: error: incompatible with your Protocol Buffer headers. Please update
+#error incompatible with your Protocol Buffer headers. Please update
+ ^
+bazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/_virtual_includes/field_mask_proto/google/protobuf/field_mask.pb.h:14:2: error: your headers.
+#error your headers.
+ ^
+bazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/_virtual_includes/field_mask_proto/google/protobuf/field_mask.pb.h:36:1: error: unknown type name 'PROTOBUF_NAMESPACE_OPEN'
+PROTOBUF_NAMESPACE_OPEN
+^
+bazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/_virtual_includes/field_mask_proto/google/protobuf/field_mask.pb.h:37:1: error: expected unqualified-id
+namespace internal {
+^
+bazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/_virtual_includes/field_mask_proto/google/protobuf/field_mask.pb.h:40:1: error: unknown type name 'PROTOBUF_NAMESPACE_CLOSE'
+PROTOBUF_NAMESPACE_CLOSE
+^
+bazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/_virtual_includes/field_mask_proto/google/protobuf/field_mask.pb.h:46:16: error: no member named 'PROTOBUF_NAMESPACE_ID' in the global namespace
+extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_google_2fprotobuf_2ffield_5fmask_2eproto;
+             ~~^
+bazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/_virtual_includes/field_mask_proto/google/protobuf/field_mask.pb.h:47:1: error: unknown type name 'PROTOBUF_NAMESPACE_OPEN'
+PROTOBUF_NAMESPACE_OPEN
+^
+bazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/_virtual_includes/field_mask_proto/google/protobuf/field_mask.pb.h:51:1: error: unknown type name 'PROTOBUF_NAMESPACE_CLOSE'
+PROTOBUF_NAMESPACE_CLOSE
+^
+bazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/_virtual_includes/field_mask_proto/google/protobuf/field_mask.pb.h:52:24: error: expected ';' after top level declarator
+PROTOBUF_NAMESPACE_OPEN
+                       ^
+                       ;
+bazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/_virtual_includes/field_mask_proto/google/protobuf/field_mask.pb.h:54:1: error: unknown type name 'PROTOBUF_NAMESPACE_CLOSE'
+PROTOBUF_NAMESPACE_CLOSE
+^
+bazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/_virtual_includes/field_mask_proto/google/protobuf/field_mask.pb.h:55:24: error: expected ';' after top level declarator
+PROTOBUF_NAMESPACE_OPEN
+                       ^
+                       ;
+bazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/_virtual_includes/field_mask_proto/google/protobuf/field_mask.pb.h:60:14: error: no member named 'PROTOBUF_NAMESPACE_ID' in the global namespace
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:google.protobuf.FieldMask) */ {
+           ~~^
+bazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/_virtual_includes/field_mask_proto/google/protobuf/field_mask.pb.h:60:37: error: expected class name
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:google.protobuf.FieldMask) */ {
+                                    ^
+bazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/_virtual_includes/field_mask_proto/google/protobuf/field_mask.pb.h:63:16: error: only virtual member functions can be marked 'override'
+  ~FieldMask() override;
+               ^~~~~~~~
+bazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/_virtual_includes/field_mask_proto/google/protobuf/field_mask.pb.h:64:43: error: no member named 'PROTOBUF_NAMESPACE_ID' in the global namespace
+  explicit PROTOBUF_CONSTEXPR FieldMask(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+                                        ~~^
+bazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/_virtual_includes/field_mask_proto/google/protobuf/field_mask.pb.h:90:18: error: no member named 'PROTOBUF_NAMESPACE_ID' in the global namespace
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+               ~~^
+bazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/_virtual_includes/field_mask_proto/google/protobuf/field_mask.pb.h:93:18: error: no member named 'PROTOBUF_NAMESPACE_ID' in the global namespace
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+               ~~^
+bazel-out/darwin_arm64-fastbuild/bin/external/com_google_protobuf/src/google/protobuf/_virtual_includes/field_mask_proto/google/protobuf/field_mask.pb.h:96:18: error: no member named 'PROTOBUF_NAMESPACE_ID' in the global namespace
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+               ~~^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+INFO: Elapsed time: 82.733s, Critical Path: 12.08s
+INFO: 1256 processes: 455 internal, 801 darwin-sandbox.
+ERROR: Build did NOT complete successfully

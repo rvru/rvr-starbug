@@ -1,0 +1,18 @@
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //riscv:rv32g_sim (0 packages loaded, 0 targets configured)
+Analyzing: target //riscv:rv32g_sim (0 packages loaded, 0 targets configured)
+[0 / 1] [Prepa] BazelWorkspaceStatusAction stable-status.txt
+INFO: Analyzed target //riscv:rv32g_sim (0 packages loaded, 0 targets configured).
+INFO: Found 1 target...
+Target //riscv:rv32g_sim up-to-date:
+  bazel-bin/riscv/rv32g_sim
+INFO: Elapsed time: 0.101s, Critical Path: 0.00s
+INFO: 1 process: 1 internal.
+INFO: Build completed successfully, 1 total action
+INFO: Running command line: bazel-bin/riscv/rv32g_sim --semihost_arm /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/fir_filter/fir_test_scalar.elf
+Starting simulation
+Simulation done: 0.1 sec
+
+Cycle count = 1842564

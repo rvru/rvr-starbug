@@ -1,0 +1,78 @@
+Command failed: bazel run :rv32_vliw_sim -- --semihost_arm "$(realpath ../benchmarks/fir_filter/fir_test_vliw.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/fir_filter/temp/out_vliw_32.log.raw bash -c "bazel run :rv32_vliw_sim -- --semihost_arm "$(realpath ../benchmarks/fir_filter/fir_test_vliw.elf)"" >/dev/null 2>&1' returned non-zero exit status 255.
+Command failed: bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/fir_filter/fir_test_scalar.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/fir_filter/temp/out_scalar_32.log.raw bash -c "bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/fir_filter/fir_test_scalar.elf)"" >/dev/null 2>&1' returned non-zero exit status 255.
+Command failed: bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/fir_filter/fir_test_empty.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/fir_filter/temp/out_empty_32.log.raw bash -c "bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/fir_filter/fir_test_empty.elf)"" >/dev/null 2>&1' returned non-zero exit status 255.
+Command failed: bazel run :rv32_vliw_sim -- --semihost_arm "$(realpath ../benchmarks/fir_filter/fir_test_vliw.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/fir_filter/temp/out_vliw_1024.log.raw bash -c "bazel run :rv32_vliw_sim -- --semihost_arm "$(realpath ../benchmarks/fir_filter/fir_test_vliw.elf)"" >/dev/null 2>&1' returned non-zero exit status 255.
+Command failed: bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/fir_filter/fir_test_scalar.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/fir_filter/temp/out_scalar_4096.log.raw bash -c "bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/fir_filter/fir_test_scalar.elf)"" >/dev/null 2>&1' returned non-zero exit status 255.
+Command failed: bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_scalar.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/dp/temp/out_scalar_512.log.raw bash -c "bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_scalar.elf)"" >/dev/null 2>&1' returned non-zero exit status 255.
+Command failed: bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_empty.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/dp/temp/out_empty_512.log.raw bash -c "bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_empty.elf)"" >/dev/null 2>&1' returned non-zero exit status 255.
+Command failed: bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_scalar.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/dp/temp/out_scalar_128.log.raw bash -c "bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_scalar.elf)"" >/dev/null 2>&1' returned non-zero exit status 255.
+Command failed: bazel run :rv32_vliw_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_vliw.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/dp/temp/out_vliw_128.log.raw bash -c "bazel run :rv32_vliw_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_vliw.elf)"" >/dev/null 2>&1' returned non-zero exit status 8.
+Command failed: bazel run :rv32_vliw_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_vliw.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/dp/temp/out_vliw_256.log.raw bash -c "bazel run :rv32_vliw_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_vliw.elf)"" >/dev/null 2>&1' returned non-zero exit status 2.
+Command failed: bazel run :rv32_vliw_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_vliw.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/dp/temp/out_vliw_256.log.raw bash -c "bazel run :rv32_vliw_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_vliw.elf)"" >/dev/null 2>&1' returned non-zero exit status 255.
+Command failed: bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_scalar.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/dp/temp/out_scalar_256.log.raw bash -c "bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_scalar.elf)"" >/dev/null 2>&1' returned non-zero exit status 255.
+Command failed: bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_empty.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/dp/temp/out_empty_256.log.raw bash -c "bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_empty.elf)"" >/dev/null 2>&1' returned non-zero exit status 255.
+Command failed: bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_empty.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/dp/temp/out_empty_128.log.raw bash -c "bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_empty.elf)"" >/dev/null 2>&1' returned non-zero exit status 255.
+Command failed: bazel run :rv32_vliw_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_vliw.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/dp/temp/out_vliw_256.log.raw bash -c "bazel run :rv32_vliw_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_vliw.elf)"" >/dev/null 2>&1' returned non-zero exit status 255.
+Command failed: bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_scalar.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/dp/temp/out_scalar_256.log.raw bash -c "bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_scalar.elf)"" >/dev/null 2>&1' returned non-zero exit status 255.
+Command failed: bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_empty.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/dp/temp/out_empty_256.log.raw bash -c "bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_empty.elf)"" >/dev/null 2>&1' returned non-zero exit status 255.
+Command failed: bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_scalar.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/dp/temp/out_scalar_256.log.raw bash -c "bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_scalar.elf)"" >/dev/null 2>&1' returned non-zero exit status 255.
+Command failed: bazel run :rv32_vliw_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_vliw.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/dp/temp/out_vliw_32.log.raw bash -c "bazel run :rv32_vliw_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_vliw.elf)"" >/dev/null 2>&1' returned non-zero exit status 255.
+Command failed: bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_scalar.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/dp/temp/out_scalar_32.log.raw bash -c "bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_scalar.elf)"" >/dev/null 2>&1' returned non-zero exit status 255.
+Command failed: bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_empty.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/dp/temp/out_empty_32.log.raw bash -c "bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_empty.elf)"" >/dev/null 2>&1' returned non-zero exit status 255.
+Command failed: bazel run :rv32_vliw_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_vliw.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/dp/temp/out_vliw_256.log.raw bash -c "bazel run :rv32_vliw_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_vliw.elf)"" >/dev/null 2>&1' returned non-zero exit status 255.
+Command failed: bazel run :rv32_vliw_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_vliw.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/dp/temp/out_vliw_8192.log.raw bash -c "bazel run :rv32_vliw_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_vliw.elf)"" >/dev/null 2>&1' returned non-zero exit status 8.
+Command failed: bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_scalar.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/dp/temp/out_scalar_128.log.raw bash -c "bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_scalar.elf)"" >/dev/null 2>&1' returned non-zero exit status 255.
+Command failed: bazel run :rv32_vliw_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_vliw.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/dp/temp/out_vliw_128.log.raw bash -c "bazel run :rv32_vliw_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_vliw.elf)"" >/dev/null 2>&1' returned non-zero exit status 255.
+Command failed: bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_empty.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/dp/temp/out_empty_128.log.raw bash -c "bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_empty.elf)"" >/dev/null 2>&1' returned non-zero exit status 8.
+Command failed: bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_scalar.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/dp/temp/out_scalar_256.log.raw bash -c "bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_scalar.elf)"" >/dev/null 2>&1' returned non-zero exit status 8.
+Command failed: bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_empty.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/dp/temp/out_empty_512.log.raw bash -c "bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_empty.elf)"" >/dev/null 2>&1' returned non-zero exit status 255.
+Command failed: bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_scalar.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/dp/temp/out_scalar_128.log.raw bash -c "bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_scalar.elf)"" >/dev/null 2>&1' returned non-zero exit status 255.
+Command failed: bazel run :rv32_vliw_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_vliw.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/dp/temp/out_vliw_512.log.raw bash -c "bazel run :rv32_vliw_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_vliw.elf)"" >/dev/null 2>&1' returned non-zero exit status 255.
+Command failed: bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_scalar.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/dp/temp/out_scalar_512.log.raw bash -c "bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_scalar.elf)"" >/dev/null 2>&1' returned non-zero exit status 255.
+Command failed: bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_empty.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/dp/temp/out_empty_512.log.raw bash -c "bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_empty.elf)"" >/dev/null 2>&1' returned non-zero exit status 255.
+Command failed: bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_empty.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/dp/temp/out_empty_2048.log.raw bash -c "bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_empty.elf)"" >/dev/null 2>&1' returned non-zero exit status 255.
+Command failed: bazel run :rv32_vliw_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_vliw.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/dp/temp/out_vliw_32.log.raw bash -c "bazel run :rv32_vliw_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_vliw.elf)"" >/dev/null 2>&1' returned non-zero exit status 255.
+Command failed: bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_scalar.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/dp/temp/out_scalar_32.log.raw bash -c "bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_scalar.elf)"" >/dev/null 2>&1' returned non-zero exit status 255.
+Command failed: bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_empty.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/dp/temp/out_empty_32.log.raw bash -c "bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_empty.elf)"" >/dev/null 2>&1' returned non-zero exit status 255.
+Command failed: bazel run :rv32_vliw_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_vliw.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/dp/temp/out_vliw_32.log.raw bash -c "bazel run :rv32_vliw_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_vliw.elf)"" >/dev/null 2>&1' returned non-zero exit status 255.
+Command failed: bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_scalar.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/dp/temp/out_scalar_32.log.raw bash -c "bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_scalar.elf)"" >/dev/null 2>&1' returned non-zero exit status 255.
+Command failed: bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_empty.elf)"
+Command 'script -q /Users/leomarek/ZedProjects/mpact-riscv/benchmarks/dp/temp/out_empty_32.log.raw bash -c "bazel run :rv32g_sim -- --semihost_arm "$(realpath ../benchmarks/dp/dp_empty.elf)"" >/dev/null 2>&1' returned non-zero exit status 255.

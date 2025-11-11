@@ -335,10 +335,10 @@ void RiscVIBlt(const Instruction* instruction) {
 
 
 void RiscVExVLIW(const Instruction* instruction) {
-  LOG(INFO) << " executing VLIW parent";
+  // LOG(INFO) << " executing VLIW parent";
   Instruction* child = instruction->child();
   while (child != nullptr) {
-    LOG(INFO) << " -> executing child opcode: " << child->opcode();
+    // LOG(INFO) << " -> executing child opcode: " << child->opcode();
     child->Execute();
     child = child->next();
   }
@@ -365,10 +365,10 @@ namespace RV64 {
 
 
 void RiscVExVLIW(const Instruction* instruction) {
-  LOG(INFO) << " executing VLIW parent";
+  // LOG(INFO) << " executing VLIW parent";
   Instruction* child = instruction->child();
   while (child != nullptr) {
-    LOG(INFO) << " -> executing child opcode: " << child->opcode();
+    // LOG(INFO) << " -> executing child opcode: " << child->opcode();
     child->Execute();
     child = child->next();
   }

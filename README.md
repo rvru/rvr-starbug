@@ -41,7 +41,7 @@ To build the mpact-sim libraries for x86 based processors, use the command
 command `bazel test ...:all`.
 
 For Apple computers with Arm64 M series chips, use `bazel build --macos_sdk_version=YOUR_SDK_VERSION :all` where YOUR_SDK_VERSION is the
-version of the macOS SDK you are using. You can find the version of the SDK by running 'xcodebuild -showsdks' in the terminal. For example, if you are using macOS 15.1, you would run `bazel build --macos_sdk_version=15.1 :all`. The specific simulator we are using for scalar is :rv32g_sim, which is the 32 bit scalar simulator. The 64 bit scalar simulator is :rv64g_sim. The vector simulator is :rv32v_sim and :rv64v_sim for 32 and 64 bit respectively. The VLIW sim is WIP.
+version of the macOS SDK you are using. You can find the version of the SDK by running 'xcodebuild -showsdks' in the terminal. For example, if you are using macOS 15.1, you would run `bazel build --macos_sdk_version=15.1 ...:all`. The specific simulator we are using for scalar is :rv32g_sim, which is the 32 bit scalar simulator. The 64 bit scalar simulator is :rv64g_sim. The vector simulator is :rv32v_sim and :rv64v_sim for 32 and 64 bit respectively. The VLIW sim is WIP.
 
 To test that everything has built correctly, run the command `bazel run :rv32g_sim -- --semihost_htif "$(realpath ../benchmarks/fir_filter/fir_test.elf)"' and you should see the output "Hello World!" in the terminal.
 
